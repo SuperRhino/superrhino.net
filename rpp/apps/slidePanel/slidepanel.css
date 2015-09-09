@@ -1,0 +1,5 @@
+.sp-container{position:relative}
+.sp-container div{position:absolute;background-color:#fff;overflow:auto}
+.sp-coverslide{position:absolute;top:0;left:0}
+.sp-slide{position:absolute;top:0;right:0}
+.sp-tabcontrol{position:absolute;top:0;right:0;font-size:12px;line-height:12px;margin:2px 0 0 0}

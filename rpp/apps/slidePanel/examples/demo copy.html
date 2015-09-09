@@ -1,0 +1,250 @@
+<html>
+<head>
+  <title>jQuery slidePanel Plug-In Demos</title>
+  <link rel="stylesheet" type="text/css" href="../slidepanel.css" />
+  <link rel="stylesheet" type="text/css" href="examples.css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../jquery.slidepanel.js"></script>
+  <script type="text/javascript">
+  jQuery(function(){
+
+	  $("div#slidePanel-A").slidePanel();
+
+    $("#slidePanel-B").slidePanel({
+        width:'420',
+        height:'250',
+        slideWidth:'330',
+        tabWidth:'25',
+        tabHeight:'35',
+        border:'1px solid #dcdcdc',
+        padding:'10px',
+        closeable:true
+     });
+
+    $("#slidePanel-F").slidePanel({
+        width:'445',
+        height:'185',
+        slideWidth:'430',
+        tabWidth:'15',
+        tabHeight:'36',
+        border:'2px solid #cacaca',
+        backgroundColor:'#ffffff',
+        coverSlideBackgroundColor:'#eeeeee',
+        padding:'12px',
+        openIndex:'1'
+     });
+
+  });
+  </script>
+  <style>
+  body{ margin:10px 0 0 40px; }
+  </style>
+</head>
+<body>
+  <h1>jQuery slidePanel Plug-In Demos</h1>
+
+  <ul>
+    <li><a href="#options">Options</a></li>
+    <li><a href="#demos">Demos</a></li>
+  </ul>
+  <p></p>
+  
+  <hr />
+  <a name="options"></a>
+  <h2>Options:</h2>
+  <h3>Defaults</h3>
+  <pre>
+  $.fn.slidePanel.defaults = {
+      width: '200',
+      height: '200',
+      slideWidth: '200',
+      tabHeight: '15',
+      tabWidth: '30',
+      openIndex: '0',
+      backgroundColor:'#ffffff',
+      coverSlideBackgroundColor:'#ffffff',
+      border:'0px none',
+      padding:'0px',
+      closeable:false,
+      zIndexMax: '100'
+  };
+  </pre>
+  <p>You are able to set defaults directly:</p>
+  <code>$.fn.slidePanel.defaults.width = '500';</code><br />
+  <p>
+    <strong>width</strong>: Width of the cover slide in pixels (if smaller than slideWidth, you'll need to manaully hide the slide excess)<br />
+    <strong>height</strong>: Height of the entire slidePanel in pixels (cover slide & slide panels)<br />
+    <strong>slideWidth</strong>: width of the underlying slides in pixels<br />
+    <strong>tabHeight</strong>: height of the tabs in pixels<br />
+    <strong>tabWidth</strong>: width of the tabs in pixels<br />
+    <strong>openIndex</strong>: index of the slide to open by default (0 to close all by default)<br />
+    <strong>backgroundColor</strong>: background color of the underlying slides<br />
+    <strong>coverSlideBackgroundColor</strong>: background color of the cover slide<br />
+    <strong>border</strong>: border for all slides. Normal CSS syntax accepted.<br />
+    <strong>padding</strong>: padding for all slides. Normal CSS syntax accepted.<br />
+    <strong>closeable</strong>: true or false; let use close slides.<br />
+    <strong>zIndexMax</strong>: Largest z-index value for the slidePanel.<br />
+  </p>
+  
+
+  <hr />
+  <a name="demos"></a>
+  <h2>Demos:</h2>
+  <!-- Basic Demo -->
+  <h3>Basic Demo</h3>
+  <pre>$("div#slidePanel-A").slidePanel();</pre>
+	<div id="slidePanel-A">
+	  <div>
+	    <p>
+	    This is the main "cover slide"<br />
+	    Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+      velit.
+	    </p>
+	  </div>
+	  <h3><a href="#">P1</a></h3>
+	  <div>
+	    <p>
+	    slidePanel 1 non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+	    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+	    velit.
+	    </p>
+	  </div>
+	  <h3><a href="#">P2</a></h3>
+	  <div>
+	    <p>
+	    slidePanel 2 risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+	    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+	    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+	    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+	    </p>
+	    <ul>
+	      <li>List item one</li>
+	      <li>List item two</li>
+	      <li>List item three</li>
+	    </ul>
+	  </div>
+	  <h3><a href="#">P3</a></h3>
+	  <div>
+	    <p>
+	    slidePanel 3. Pellentesque habitant morbi tristique senectus et netus
+	    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+	    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+	    mauris vel est.
+	    </p>
+	  </div>
+	</div>
+
+  <!-- Formatted Demo -->
+  <h3>Formatted Demo</h3>
+  <pre>
+  $("#slidePanel-B").slidePanel({
+        width:'420',
+        height:'250',
+        slideWidth:'330',
+        tabWidth:'25',
+        tabHeight:'35',
+        border:'1px solid #dcdcdc',
+        padding:'10px',
+        closeable:true
+  });
+  </pre>
+	<div id="slidePanel-B">
+	  <div>
+	    <img src="images/pb.jpg" alt="Peanut Butter Blossoms" style="float:right;" />
+	    <strong>JIF Peanut Butter Blossoms Recipe</strong><br />
+	    <em>Ingredients:</em>
+      <ul>
+       <li>1/2 cup CRISCO Butter Shortening</li>
+       <li>1/2 cup JIF Creamy Peanut Butter</li>
+       <li>1/2 cup firmly packed brown sugar</li>
+       <li>1/2 cup sugar</li>
+       <li>1 large egg</li>
+       <li>2 tablespoons milk</li>
+       <li>1 teaspoon vanilla</li>
+       <li>1 3/4 cups PILLSBURY BEST All Purpose Flour</li>
+       <li>1 teaspoon baking soda</li>
+       <li>1/2 teaspoon salt</li>
+       <li>Sugar</li>
+       <li>48 foil-wrapped milk chocolate pieces, unwrapped</li>
+      </ul>
+      <a href="http://allrecipes.com/Recipe/Jif-Peanut-Butter-Blossoms/Detail.aspx" target="_blank">via allrecipes.com</a>
+	  </div>
+	  <h3><a href="#">step<br/>1</a></h3>
+	  <div>
+	    <h2>Step 1</h2>
+	    <ul>
+	     <li>Preheat oven to 375 degrees F.</li>
+	     <li>Cream together shortening, peanut butter, brown sugar and 1/2 cup sugar. Add egg, milk and vanilla. Beat well.</li>
+	    </ul>
+	  </div>
+	  <h3><a href="#">step<br/>2</a></h3>
+	  <div>
+      <h2>Step 2</h2>
+	    <ul>
+	      <li>Sire together flour, baking soda and salt. Add to creamed mixture. Beat on low speed until stiff dough forms.</li>
+	      <li>Shape into 1-inch balls. Roll in sugar. Place 2 inches apart on ungreased cookie sheet.</li>
+	    </ul>
+	  </div>
+	  <h3><a href="#">step<br/>3</a></h3>
+	  <div>
+	    <h2>Step 3</h2>
+      <ul>
+        <li>Bake for 10 to 12 minutes or until golden brown.</li>
+        <li>Top each cookie immediately with an unwrapped chocolate piece, pressing down firmly so that cookie cracks around edge. Remove from cookie sheets to cool.</li>
+      </ul>
+	  </div>
+	</div>
+	
+	<!-- formatted polished example -->
+	<h3>Polished Example</h3>
+	<pre>
+  $("#slidePanel-F").slidePanel({
+        width:'445',
+        height:'185',
+        slideWidth:'430',
+        tabWidth:'15',
+        tabHeight:'36',
+        border:'2px solid #cacaca',
+        backgroundColor:'#ffffff',
+        coverSlideBackgroundColor:'#eeeeee',
+        padding:'12px',
+        openIndex:'1'
+  });
+  </pre>
+	<div id="slidePanel-F">
+	 <div>
+	   <h1>Cover Slide</h1>
+	   <p>Quam sem mollis nibh, ut lobortis magna elit vel sapien. Vestibulum facilisis varius sodales. Maecenas sit amet orci nisi, eget cursus nisi. Cras non nibh id dui eleifend sodales in at eros. Praesent vel ante non orci posuere aliquet. Aliquam interdum, nibh eget condimentum imperdiet, nisi leo imperdiet tellus, et ultricies orci urna id leo. Nulla sit amet neque eget dui tristique sodales.</p>
+	 </div>
+	 <h3><a href="#">&nbsp;</a></h3>
+	 <div>
+	   <h2>Panel 1</h2>
+	   <p>Donec consequat posuere turpis, quis sodales erat ullamcorper eu. Fusce massa augue, rutrum ac faucibus vitae, ultrices non nisi. Suspendisse eleifend sodales facilisis. Integer vel urna ac tortor pellentesque dapibus. Nullam in justo lorem. Mauris nisl velit, consequat in faucibus sit amet, tempus ut nisl.</p>
+	 </div>
+	 <h3><a href="#">&nbsp;</a></h3>
+   <div>
+     <h2>Panel 2</h2>
+     <p>Donec consequat posuere turpis, quis sodales erat ullamcorper eu. Fusce massa augue, rutrum ac faucibus vitae, ultrices non nisi.</p>
+     <p>Suspendisse eleifend sodales facilisis. Integer vel urna ac tortor pellentesque dapibus. Nullam in justo lorem. Mauris nisl velit, consequat in faucibus sit amet, tempus ut nisl.</p>
+   </div>
+	 <h3><a href="#">&nbsp;</a></h3>
+   <div>
+     <h2>Panel 3</h2>
+     <p>Donec consequat posuere turpis, quis sodales erat ullamcorper eu.</p>
+     <ul>
+      <li>Fusce massa augue</li>
+      <li>Rutrum ac faucibus vitae</li>
+      <li>Ltrices non nisi</li>
+     </ul>
+   </div>
+	 <h3><a href="#">&nbsp;</a></h3>
+   <div>
+     <h2>Panel 4</h2>
+     <p>Donec consequat posuere turpis, quis sodales erat ullamcorper eu. Fusce massa augue, rutrum ac faucibus vitae, ultrices non nisi. Suspendisse eleifend sodales facilisis. Integer vel urna ac tortor pellentesque dapibus. Nullam in justo lorem. Mauris nisl velit, consequat in faucibus sit amet, tempus ut nisl.</p>
+     <p>Pellentesque mauris mi, vehicula non cursus eu, pretium gravida sapien. Pellentesque euismod, erat vel bibendum mattis, est arcu auctor dolor, eget tempus massa elit vitae est.</p>
+   </div>
+	</div>
+
+  
+</body>
+</html>

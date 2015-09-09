@@ -1,0 +1,12 @@
+/* slidePanel-B -- Formatted Example */
+#slidePanel-B{ font-size:11px; }
+#slidePanel-B h3.sp-tabcontrol a{ display:block;background:#dcdcdc;height:35px;width:25px;text-decoration:none;text-align:center;color:#464646; }
+#slidePanel-B h2{ font-size:12px;color:#464646; }
+#slidePanel-B div{ font-size:12px; }
+
+/* slidePanel-F -- Polished Example */
+#slidePanel-F{ margin:0 0 25px 0;color:#464646; }
+#slidePanel-F p{ margin:0 0 5px 0; }
+#slidePanel-F h3.sp-tabcontrol a{ display:block;background: url(images/tab.gif) no-repeat scroll 0px 0px;height:36px;width:15px;text-decoration:none; }
+#slidePanel-F h1{ font-size:14px;line-height:16px;color:#CC6600; }
+#slidePanel-F h2{ font-size:12px;color:#718611; }
