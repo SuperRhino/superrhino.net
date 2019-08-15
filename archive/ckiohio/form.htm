@@ -1,0 +1,33 @@
+<html><head><title>Test Form</title></head>
+
+<body>
+<!----------------------------WEB FORM------------------------------->
+<FORM METHOD="POST" ACTION="http://www.ckiohio.org/bin/formmail.pl">
+<INPUT TYPE="hidden" NAME="recipient" VALUE="techchair@ckiohio.org">
+<INPUT TYPE="hidden" NAME="subject" VALUE="subject">
+<INPUT TYPE="hidden" NAME="redirect" VALUE="http://ckiohio.org/home.htm">
+<INPUT TYPE="hidden" NAME="required" VALUE="realname,email">
+
+<TABLE>
+<TR>
+  <TD>Your Name:</TD>
+  <TD><INPUT TYPE="text" NAME="realname"></TD>
+</TR>
+<TR>
+  <TD>Email Address:</TD>
+  <TD><INPUT TYPE="text" NAME="email"></TD>
+</TR>
+<TR VALIGN="top">
+  <TD>Message:</TD>
+  <TD><TEXTAREA NAME="message" ROWS="5" WRAP></TEXTAREA></TD>
+</TR>
+<TR>
+  <TD></TD>
+  <TD><INPUT TYPE="Submit" VALUE="send"></TD>
+</TR>
+</TABLE>
+
+</FORM>
+
+</body>
+</html>
